@@ -8,7 +8,7 @@ metadata:
     tier: frontend
 spec:
   containers:
-  - image: preetam6126/web:p2
+  - image: preetam6126/web:p3
     name: web
     imagePullPolicy: Always
     resources:
