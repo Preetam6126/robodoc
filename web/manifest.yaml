@@ -23,10 +23,14 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-metadata: 
+metadata:
   name: web-service
 spec:
-  type: LoadBalancer  
+  type: LoadBalancer
   selector:
     name: web
     tier: frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
