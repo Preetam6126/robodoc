@@ -24,9 +24,9 @@ spec:
     name: rabbitmq
     tier: db
   ports:
-    - port: 5672
-      name: amqp
-    - port: 15672
-      name: http
-    type: ClusterIP
+  - port: 5672
+    name: amqp
+   - port: 15672
+    name: http
+  type: ClusterIP
 ---
