@@ -41,7 +41,7 @@ kind: Service
 metadata: 
   name: mysql
 spec:
-  selectors:
+  selector:
     name: mysql
     tier: db
   ports:
