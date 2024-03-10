@@ -7,7 +7,7 @@ data:
   CATALOGUE_HOST: "http://catalogue"
   REDIS_HOST: "redis"
 ---
-apiVersion: V1
+apiVersion: v1
 kind: Pod
 metadata:
   name: cart
