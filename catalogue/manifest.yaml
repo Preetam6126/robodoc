@@ -19,7 +19,7 @@ metadata:
     tier: app
 spec:
   containers:
-  - image: preetam6126/catalogue:k8
+  - image: preetam6126/catalogue:g8
     name: catalogue
     imagePullPolicy: Always
     resources:

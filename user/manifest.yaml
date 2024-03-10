@@ -18,7 +18,7 @@ spec:
   containers:
   - name: user
     imagePullPolicy: Always
-    image: preetam6126/user:v1
+    image: preetam6126/user:g8
     envFrom:
     - configMapRef:
         name: user-config
@@ -39,4 +39,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 8080
-               
+

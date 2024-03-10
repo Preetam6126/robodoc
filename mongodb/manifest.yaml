@@ -8,7 +8,7 @@ metadata:
     tier: db
 spec:
   containers:
-  - image: preetam6126/mongodb:v5
+  - image: preetam6126/mongodb:g8
     name: mongodb
     imagePullPolicy: Always
     # resources:
