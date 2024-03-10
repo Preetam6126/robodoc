@@ -30,9 +30,9 @@ spec:
     imagePullPolicy: Always
     envFrom:
     - configMapRef:
-      name: mysql-config
+        name: mysql-config
     - secretRef:
-      name: mysql-secret
+        name: mysql-secret
     ports:
       - containerPort: 3306
 ---
