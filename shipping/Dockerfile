@@ -1,13 +1,13 @@
 FROM debian:10 AS build
 RUN apt-get update && apt-get -y install maven
+RUN apt-get install ca-certificates-java openjdk-11-jre-headless
 WORKDIR /opt/shipping
 COPY pom.xml /opt/shipping/
 RUN mvn dependency:resolve
 COPY src /opt/shipping/src/
 RUN mvn package
 
-FROM openjdk:8
-RUN mkdir /usr/share/man/man1/
+FROM openjdk:8-jre-alpine
 EXPOSE 8080
 WORKDIR /opt/shipping
 ENV CART_ENDPOINT=cart:8080
