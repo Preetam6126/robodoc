@@ -5,7 +5,7 @@ COPY pom.xml /opt/shipping/
 RUN mvn dependency:resolve
 COPY src /opt/shipping/src/
 RUN mvn package
-CMD mkdir -p /usr/share/man/man1
+RUN mkdir -p /usr/share/man/man1
 
 FROM openjdk:8-jre-alpine   
 EXPOSE 8080
