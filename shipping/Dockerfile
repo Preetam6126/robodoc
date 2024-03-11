@@ -1,5 +1,4 @@
 FROM debian:10 AS build
-RUN mkdir -p /usr/share/man/man1/
 RUN apt-get update && apt-get -y install maven
 WORKDIR /opt/shipping
 COPY pom.xml /opt/shipping/
