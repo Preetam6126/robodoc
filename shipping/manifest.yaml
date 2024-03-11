@@ -18,7 +18,7 @@ spec:
   containers:
   - name: shipping
     imagePullPolicy: Always
-    image: techworldwithsiva/shipping:k8
+    image: preetam6126/shipping:g8
     envFrom:
     - configMapRef:
         name: shipping-config
