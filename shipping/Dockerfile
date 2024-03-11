@@ -1,11 +1,11 @@
 FROM debian:10 AS build
-RUN mkdir -p /usr/share/man/man1
 RUN apt-get update && apt-get -y install maven
 WORKDIR /opt/shipping
 COPY pom.xml /opt/shipping/
 RUN mvn dependency:resolve
 COPY src /opt/shipping/src/
 RUN mvn package
+CMD mkdir -p /usr/share/man/man1
 
 FROM openjdk:8-jre-alpine   
 EXPOSE 8080
