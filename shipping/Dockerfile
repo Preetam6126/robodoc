@@ -5,7 +5,7 @@ COPY pom.xml /opt/shipping/
 RUN mvn dependency:resolve
 COPY src /opt/shipping/src/
 RUN mvn package
-RUN apt-get install ca-certificates-java openjdk-11-jre-headless
+RUN apt-get install ca-certificates-java openjdk-8-jre-headless
 
 FROM openjdk:8-jre-alpine
 EXPOSE 8080
